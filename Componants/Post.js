@@ -6,7 +6,7 @@ import Feather from 'react-native-vector-icons/Feather';
 const Post = (props) => {
   return (
     <>
-      <ScrollView>
+      <ScrollView showsVerticalScrollIndicator={false}>
         <View className='mt-10'>
           <View className='w-full p-2'>
             <View className='w-full flex justify-between flex-row py-2 '>

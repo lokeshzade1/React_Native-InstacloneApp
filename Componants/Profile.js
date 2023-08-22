@@ -6,7 +6,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
-export default function App() {
+export default function App(props) {
   return (
     <View className='flex-1 mt-16'>
       <StatusBar />
@@ -30,7 +30,12 @@ export default function App() {
         <Text className='font-bold text-sm'>Discription</Text>
       </View>
       <View className='flex flex-row  justify-between px-4 gap-1'>
-        <TouchableOpacity className='bg-gray-200 font-semibold flex-1 py-2 flex justify-center items-center rounded-lg'>
+        <TouchableOpacity
+          className='bg-gray-200 font-semibold flex-1 py-2 flex justify-center items-center rounded-lg'
+          onPress={() => {
+            props.navigation.navigate('Editprofile');
+          }}
+        >
           <Text>Edit profile</Text>
         </TouchableOpacity>
         <TouchableOpacity className='bg-gray-200 font-semibold flex-1 py-2 flex justify-center items-center rounded-lg'>
